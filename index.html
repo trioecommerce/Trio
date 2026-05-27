@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de Ofertas - TRIO</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Esconde a barra de rolagem do carrossel no PC, mas mantém o deslize no Touch */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- NAVBAR ESCURA -->
+    <header class="bg-slate-900 border-b border-slate-800 shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+            
+            <!-- LOGO DA LOJA -->
+            <a href="index.html" class="flex items-center h-full py-2">
+                <img src="./img/logotrio.png" alt="TRIO" class="h-12 w-auto object-contain">
+            </a>
+
+            <!-- MENU PARA DESKTOP -->
+            <nav class="hidden md:flex items-center gap-6">
+                <a href="#sobre-nos" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">Sobre Nós</a>
+                <a href="https://www.mercadolivre.com.br/pagina/it20250922110219#from=share_eshop" target="_blank" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">Loja Mercado Livre</a>
+                <a href="#vitrine" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors">Produtos</a>
+            </nav>
+
+            <!-- BOTÃO MENU HAMBURGUER -->
+            <button onclick="toggleMenu()" class="md:hidden p-2 text-gray-300 hover:text-amber-400 focus:outline-none cursor-pointer" aria-label="Abrir Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- MENU MOBILE CORTINA -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-t border-slate-800 animate-fadeIn">
+            <div class="flex flex-col p-4 gap-4">
+                <a href="#sobre-nos" onclick="toggleMenu()" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors py-1">Sobre Nós</a>
+                <a href="https://www.mercadolivre.com.br" target="_blank" onclick="toggleMenu()" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors py-1">Loja Mercado Livre</a>
+                <a href="#vitrine" onclick="toggleMenu()" class="text-sm font-medium text-gray-300 hover:text-amber-400 transition-colors py-1">Produtos</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="vitrine" class="max-w-6xl mx-auto my-6 flex-grow w-full">
+
+        <!-- CARROSSEL EXPANDIDO -->
+        <section id="secao-destaques" class="mb-8 hidden px-4">
+            <h2 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-3 flex items-center gap-2">
+                ⭐ Mais Vendidos
+            </h2>
+            <div id="grid-destaques" class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-4 w-full">
+            </div>
+        </section>
+
+        <div class="px-4 mb-6">
+            <div class="flex gap-2 border-b border-gray-200 pb-3">
+                <button id="btn-cozinha" onclick="alternarCategoria('cozinha')"
+                    class="flex-1 md:flex-none text-center bg-slate-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-xs cursor-pointer">
+                    🍳 Cozinha
+                </button>
+                <button id="btn-beleza" onclick="alternarCategoria('beleza')"
+                    class="flex-1 md:flex-none text-center bg-white text-gray-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl text-sm transition-all border border-gray-200 cursor-pointer">
+                    ✨ Beleza
+                </button>
+            </div>
+        </div>
+
+        <div class="px-4 mb-12">
+            <section id="secao-cozinha" class="block">
+                <h2 class="text-lg font-bold text-slate-900 mb-4">Utensílios de Cozinha</h2>
+                <div id="grid-cozinha" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                </div>
+            </section>
+
+            <section id="secao-beleza" class="hidden">
+                <h2 class="text-lg font-bold text-slate-900 mb-4">Beleza & Cuidados</h2>
+                <div id="grid-beleza" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                </div>
+            </section>
+        </div>
+
+        <!-- SEÇÃO: SOBRE NÓS (CENTRALIZADO) -->
+        <section id="sobre-nos" class="mx-4 mt-20 p-8 bg-white rounded-2xl border border-gray-100 shadow-xs text-center flex flex-col items-center">
+            <h2 class="text-xl font-bold text-slate-900 mb-3">Sobre Nós</h2>
+            <p class="text-sm text-gray-600 leading-relaxed max-w-2xl">
+                Bem-vindo à TRIO. Somos especialistas em selecionar os melhores utilitários domésticos e soluções inteligentes para o seu dia a dia. Nosso compromisso é entregar qualidade, agilidade e excelência através da nossa vitrine oficial no Mercado Livre.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FIM DO SITE: RODAPÉ COMPLETO -->
+    <footer class="bg-slate-900 text-gray-400 text-sm mt-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <!-- Direitos Autorais -->
+            <div class="text-center md:text-left order-3 md:order-1">
+                <p class="font-medium text-gray-300">&copy; 2026 TRIO. Todos os direitos reservados.</p>
+                <p class="text-xs text-gray-500 mt-1">Os preços e a disponibilidade dos produtos são de responsabilidade do Mercado Livre.</p>
+            </div>
+
+            <!-- Links de Navegação Rápidos -->
+            <div class="flex gap-6 order-1 md:order-2">
+                <a href="#vitrine" class="hover:text-amber-400 transition-colors">Produtos</a>
+                <a href="#sobre-nos" class="hover:text-amber-400 transition-colors">Sobre Nós</a>
+                <a href="https://www.mercadolivre.com.br" target="_blank" class="hover:text-amber-400 transition-colors">Mercado Livre</a>
+            </div>
+
+            <!-- Redes Sociais (Instagram com ícone nativo em SVG) -->
+            <div class="order-2 md:order-3">
+                <a href="https://instagram.com/seu_usuario_aqui" target="_blank" class="flex items-center gap-2 bg-slate-800/60 hover:bg-slate-800 text-gray-300 hover:text-amber-400 px-4 py-2 rounded-xl border border-slate-750 transition-all shadow-xs" aria-label="Siga-nos no Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span class="font-medium text-xs">@trio.oficial</span>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        function criarCardHTML(produto, eCarrossel = false) {
+            const precoFormatado = produto.precoDesconto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+            
+            const precoOriginalFormatado = (produto.precoOriginal && produto.precoOriginal > 0) 
+                ? produto.precoOriginal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) 
+                : '';
+
+            const etiquetaFreteUniversal = `
+                <span class="text-[11px] font-semibold text-green-600 flex items-center gap-1">
+                    <span class="text-[9px] bg-green-100 text-green-700 px-1 rounded font-bold uppercase">Grátis</span>
+                    Frete grátis acima de R$ 19,00
+                </span>
+            `;
+
+            let etiquetaFlex = '';
+            if (produto.envioFlex) {
+                etiquetaFlex = `
+                    <span class="text-[11px] font-bold text-green-700 flex items-center gap-1">
+                        ⚡ Chega amanhã (Flex)
+                    </span>
+                `;
+            }
+
+            const classesCard = eCarrossel 
+                ? "bg-white rounded-xl shadow-xs overflow-hidden flex flex-col justify-between hover:shadow-md hover:scale-102 transition-all duration-300 relative border border-gray-100 min-w-[230px] md:min-w-[calc((100%-48px)/4)] md:max-w-[calc((100%-48px)/4)] snap-start cursor-pointer block text-left"
+                : "bg-white rounded-xl shadow-xs overflow-hidden flex flex-col justify-between hover:shadow-md hover:scale-102 transition-all duration-300 relative border border-gray-100 cursor-pointer block text-left";
+
+            return `
+                <a href="javascript:void(0);" onclick="irParaOApp('${produto.linkMercadoLivre}')" class="${classesCard}">
+                    <div class="w-full h-40 md:h-48 bg-gray-50/50 p-3 flex items-center justify-center border-b border-gray-100/50">
+                        <img src="${produto.imagem}" alt="${produto.titulo}" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <div class="p-3 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xs md:text-sm font-medium text-gray-700 line-clamp-2 min-h-[32px] md:min-h-[40px]">${produto.titulo}</h3>
+                            <div class="my-2">
+                                ${(produto.precoOriginal && produto.precoOriginal > 0) ? `<span class="text-[11px] text-gray-400 line-through">${precoOriginalFormatado}</span>` : ''}
+                                <p class="text-base md:text-lg font-bold text-gray-900">${precoFormatado}</p>
+                            </div>
+                            <div class="flex flex-col gap-0.5 my-2 min-h-[36px]">
+                                ${etiquetaFreteUniversal}
+                                ${etiquetaFlex}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+
+        function alternarCategoria(categoriaAlvo) {
+            const secaoCozinha = document.getElementById('secao-cozinha');
+            const secaoBeleza = document.getElementById('secao-beleza');
+            const btnCozinha = document.getElementById('btn-cozinha');
+            const btnBeleza = document.getElementById('btn-beleza');
+
+            if (categoriaAlvo === 'cozinha') {
+                secaoCozinha.classList.replace('hidden', 'block');
+                secaoBeleza.classList.replace('block', 'hidden');
+                btnCozinha.className = "flex-1 md:flex-none text-center bg-slate-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-xs cursor-pointer";
+                btnBeleza.className = "flex-1 md:flex-none text-center bg-white text-gray-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl text-sm transition-all border border-gray-200 cursor-pointer";
+            } else {
+                secaoBeleza.classList.replace('hidden', 'block');
+                secaoCozinha.classList.replace('block', 'hidden');
+                btnBeleza.className = "flex-1 md:flex-none text-center bg-slate-800 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all shadow-xs cursor-pointer";
+                btnCozinha.className = "flex-1 md:flex-none text-center bg-white text-gray-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl text-sm transition-all border border-gray-200 cursor-pointer";
+            }
+        }
+
+        function irParaOApp(urlML) {
+            const cliqueOriginal = Date.now();
+            window.location.href = urlML;
+            setTimeout(() => {
+                if (Date.now() - cliqueOriginal < 2000) {
+                    window.location.href = urlML;
+                }
+            }, 1500);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('produtos.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("Erro ao carregar o arquivo JSON");
+                    return response.json();
+                })
+                .then(produtos => {
+                    const gridDestaques = document.getElementById('grid-destaques');
+                    const gridBeleza = document.getElementById('grid-beleza');
+                    const gridCozinha = document.getElementById('grid-cozinha');
+                    let temDestaque = false;
+
+                    produtos.forEach(produto => {
+                        if (produto.destaque) {
+                            gridDestaques.innerHTML += criarCardHTML(produto, true);
+                            temDestaque = true;
+                        }
+
+                        if (produto.categoria === "beleza") {
+                            gridBeleza.innerHTML += criarCardHTML(produto, false);
+                        } else if (produto.categoria === "cozinha") {
+                            gridCozinha.innerHTML += criarCardHTML(produto, false);
+                        }
+                    });
+
+                    if (temDestaque) {
+                        document.getElementById('secao-destaques').classList.remove('hidden');
+                        iniciarCarrosselAutomatico();
+                    }
+                })
+                .catch(error => console.error("Erro no processamento da vitrine:", error));
+        });
+
+        function iniciarCarrosselAutomatico() {
+            const carrossel = document.getElementById('grid-destaques');
+
+            setInterval(() => {
+                const card = carrossel.querySelector('.snap-start');
+                if (!card) return; 
+
+                const larguraDoCard = card.offsetWidth + 16; 
+                const fimDoCarrossel = carrossel.scrollLeft + carrossel.offsetWidth >= carrossel.scrollWidth - 10;
+
+                if (fimDoCarrossel) {
+                    carrossel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carrossel.scrollBy({ left: larguraDoCard, behavior: 'smooth' });
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>

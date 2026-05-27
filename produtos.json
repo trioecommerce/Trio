@@ -1,0 +1,134 @@
+[
+  {
+    "id": "TR-01006",
+    "titulo": "Fervedor Brinox",
+    "precoOriginal": 43.50,
+    "precoDesconto": 40.00,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_806040-MLA99614359898_122025-F.webp",
+    "linkMercadoLivre": "https://meli.la/2J1X3HB",
+    "destaque": false,
+    "categoria": "cozinha",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-01009",
+    "titulo": "Escova Cadence Secadora Alisadora Volumizadora Esc710-biv Cinza",
+    "precoOriginal": 117.00,
+    "precoDesconto": 107.31,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_772709-MLA84549155660_052025-F.webp",
+    "linkMercadoLivre": "https://meli.la/21QHtoB",
+    "destaque": true,
+    "categoria": "beleza",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-01001",
+    "titulo": "Panela De Pressão Cerâmic Life Vapt 20cm 4,5l Vanilla Brinox",
+    "precoOriginal": null,
+    "precoDesconto": 166.00,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_780039-MLU79148133583_092024-F.webp",
+    "linkMercadoLivre": "https://meli.la/175om2o",
+    "destaque": true,
+    "categoria": "cozinha",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-01002",
+    "titulo": "Panela De Pressão 4,5l Com Revestimento Cerâmico Verde",
+    "precoOriginal": 178.00,
+    "precoDesconto": 169.10,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_623604-MLB111276567559_052026-F.webp",
+    "linkMercadoLivre": "https://meli.la/1H7XpJ8",
+    "destaque": true,
+    "categoria": "cozinha",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-01003",
+    "titulo": "Panela De Pressão 4,5l Com Revestimento Cerâmico Cinza",
+    "precoOriginal": 173.10,
+    "precoDesconto": 164.35,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_977868-MLA109369406148_042026-F.webp",
+    "linkMercadoLivre": "https://meli.la/2Dp4XXP",
+    "destaque": false,
+    "categoria": "cozinha",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-010012",
+    "titulo": "Frigideira Wok Mr. Cook 24 Cm Linha Francesa 2,9l",
+    "precoOriginal": 110.00,
+    "precoDesconto": 103.82,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_973457-MLA110158994452_042026-F.webp",
+    "linkMercadoLivre": "https://meli.la/1daj5er",
+    "destaque": false,
+    "categoria": "cozinha",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-010013",
+    "titulo": "Jogo De Panelas Kit 4 Peças Antiaderente De Alumínio",
+    "precoOriginal": 178.00,
+    "precoDesconto": 143.73,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_885910-MLB111273923433_052026-F.webp",
+    "linkMercadoLivre": "https://meli.la/2gVKsmL",
+    "destaque": true,
+    "categoria": "cozinha",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-010015",
+    "titulo": "Panela de Pressão 4,5 Litros Alumínio Prateado Mega Aluminio",
+    "precoOriginal": null,
+    "precoDesconto": 98.00,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_739237-MLA96875507685_102025-F.webp",
+    "linkMercadoLivre": "https://meli.la/1DAkX4W",
+    "destaque": false,
+    "categoria": "cozinha",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-010016",
+    "titulo": "Escova Secadora Startools Bivolt 1300W com Função Anti-Frizz",
+    "precoOriginal": 167.47,
+    "precoDesconto": 132.14,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_625898-MLA103727156187_012026-F.webp",
+    "linkMercadoLivre": "https://meli.la/1DAkX4W",
+    "destaque": true,
+    "categoria": "beleza",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-010019",
+    "titulo": "Escova Secadora Startools Bivolt 1300W com Função Anti-Frizz",
+    "precoOriginal": null,
+    "precoDesconto": 94.80,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_789690-MLA99982892117_112025-F.webp",
+    "linkMercadoLivre": "https://meli.la/1DAkX4W",
+    "destaque": false,
+    "categoria": "beleza",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-010020",
+    "titulo": "Secador Preto 1800w Para Cabelo Com Bocal Direcionador Turbo",
+    "precoOriginal": 138.00,
+    "precoDesconto": 117.38,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_935270-MLB111240014118_052026-F.webp",
+    "linkMercadoLivre": "https://meli.la/1DAkX4W",
+    "destaque": false,
+    "categoria": "beleza",
+    "envioFlex": false
+  },
+  {
+    "id": "TR-010021",
+    "titulo": "Modelo Compacto: Escova Mondial Branca/rosa Fácil De Usar",
+    "precoOriginal": 194.12,
+    "precoDesconto": 165.00,
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_2X_959497-MLA112192539013_052026-F.webp",
+    "linkMercadoLivre": "https://meli.la/1DAkX4W",
+    "destaque": true,
+    "categoria": "beleza",
+    "envioFlex": false
+  }
+]
